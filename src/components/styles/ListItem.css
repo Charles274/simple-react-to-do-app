@@ -1,0 +1,46 @@
+.list-group {
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid steelblue;
+  border-radius: 5px;
+  color: steelblue;
+  font-size: 1rem;
+}
+.form-check-input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.list-text {
+  max-width: 80%;
+  flex: 10;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.list-icons {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  justify-content: flex-end;
+  color: steelblue;
+}
+
+.list-checkbox input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.task-complete {
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: all 0.5s ease-in-out;
+}
