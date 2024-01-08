@@ -69,6 +69,14 @@ export function ToDo() {
     return;
   }
 
+  function handleSort() {
+    console.log("Sort items!");
+
+    setItems((currentItems) =>
+      [...currentItems].sort((a, b) => b.name - a.name)
+    );
+  }
+
   return (
     <div className="card">
       <div className="class-header">Simple React To do App</div>
@@ -89,6 +97,9 @@ export function ToDo() {
           </button>
         </form>
         <ul className="list-group list-group-flush">
+          <div id="sort" onClick={handleSort}>
+            ⬇️
+          </div>
           {items.map((item) => (
             <Fragment key={item.id}>
               <ListItem

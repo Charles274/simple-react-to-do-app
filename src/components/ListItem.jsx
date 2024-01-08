@@ -72,9 +72,10 @@ export default function ListItem({
           <span className="badge bg-primary" onClick={() => handleDelete(id)}>
             <MdDelete />
           </span>
-          <span className="badge bg-primary" onClick={() => handleDelete(id)}>
-            ⬇️Sort
-          </span>
+          <span
+            className="badge bg-primary"
+            onClick={() => handleDelete(id)}
+          ></span>
         </div>
       </div>
     );
