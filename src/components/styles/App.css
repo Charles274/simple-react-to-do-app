@@ -94,3 +94,8 @@ button {
 button:hover {
   transform: scale(1.02);
 }
+
+.button-functions {
+  display: flex;
+  cursor: pointer;
+}

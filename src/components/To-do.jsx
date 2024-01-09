@@ -69,12 +69,19 @@ export function ToDo() {
     return;
   }
 
-  function handleSort() {
-    console.log("Sort items!");
+  function handleSort(e) {
+    if (e.target.id === "sort-ascend") {
+      setItems((currentItems) =>
+        [...currentItems].sort((a, b) => b.name - a.name)
+      );
+    }
 
-    setItems((currentItems) =>
-      [...currentItems].sort((a, b) => b.name - a.name)
-    );
+    if (e.target.id === "sort-descend") {
+      setItems((currentItems) =>
+        [...currentItems].sort((a, b) => a.name - b.name)
+      );
+    }
+    return;
   }
 
   return (
@@ -97,8 +104,13 @@ export function ToDo() {
           </button>
         </form>
         <ul className="list-group list-group-flush">
-          <div id="sort" onClick={handleSort}>
-            ⬇️
+          <div className="button-functions">
+            <div id="sort-ascend" onClick={handleSort}>
+              ⬆️
+            </div>
+            <div id="sort-descend" onClick={handleSort}>
+              ⬇️
+            </div>
           </div>
           {items.map((item) => (
             <Fragment key={item.id}>
